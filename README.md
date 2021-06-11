@@ -1,4 +1,4 @@
-# Fivem React + TypeScript Boilerplate.
+# FiveM React + TypeScript Boilerplate.
 
 - Functional boilerplate for NUI development.
 
