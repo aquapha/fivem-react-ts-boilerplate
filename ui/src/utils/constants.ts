@@ -1,0 +1,1 @@
+export const RESOURCE_NAME = process.env.REACT_APP_RESOURCE_NAME;

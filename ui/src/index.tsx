@@ -1,17 +1,17 @@
+import { EventListener } from "./config/NUI/NUIHandler";
+import { AppDataProvider } from "./contexts";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import { rootReducer } from "./app/utils/rootReducer";
-import { EventListener } from "./app/Nui/NuiHandler";
 import { App } from "./app";
-import "./index.scss";
+import React from "react";
 
-export const store = createStore(rootReducer, {});
+import "./styles/globals.scss";
 
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-		<EventListener />
-	</Provider>,
+  <React.StrictMode>
+    <AppDataProvider>
+      <App />
+      <EventListener />
+    </AppDataProvider>
+  </React.StrictMode>,
 	document.getElementById("root")
 );

@@ -1,15 +1,26 @@
-import { Nui } from "./app/Nui/NuiHandler";
-import { useSelector } from "react-redux";
-import { RootState } from "./app/utils/types";
-import { store } from "./index";
-import "./app.scss";
-
-Nui.registerEmit("toggle", (data: { type: any; value: any }) => {
-	store.dispatch({ type: "toggle", payload: data.value });
-});
+import { useCloseMenu } from './hooks'
+import { useAppDataToggle } from "./contexts/appDataProvider";
+import { RegisterAllNUIs } from "./config/NUI/RegisterNUICalls";
 
 export const App = () => {
-	const { isShowing } = useSelector((state: RootState) => state.data);
+  RegisterAllNUIs();
+  useCloseMenu();
 
-	return <>{isShowing ? <h1>APP</h1> : null}</>;
+  const toggle = useAppDataToggle();
+
+  return (
+    <>
+      {toggle &&
+        <>
+          <div className="container">
+            <h1 className="thanks-text">
+              Thanks for choosing my React TS boilerplate!
+            </h1>
+          </div>
+        </>
+      }
+    </>
+  );
 };
+
+export default App;
