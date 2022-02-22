@@ -11,10 +11,12 @@
 
 2.  Once all of the necessary packages are installed, you can run: [ To start a development server ]
 
-        npm run dev [ http://localhost:3000 ]
+        npm run dev
+        Server will open at [ http://localhost:3000 ].
 
 3.  Or you can run: [ To deploy a prod build for your server ]
 
-        npm run fivem [ Restart script inside your server. ]
+        npm run fivem
+        [ Restart the script inside your server. ]
 
 ### Boilerplate is free of use, feel free to share it around!
