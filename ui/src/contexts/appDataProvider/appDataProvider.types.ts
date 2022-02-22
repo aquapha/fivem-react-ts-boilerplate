@@ -1,5 +1,4 @@
 export type AppContextState = {
-  closing?: boolean;
   toggle?: boolean;
 }
 
