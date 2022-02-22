@@ -1,5 +1,4 @@
 ### **Advised to use node@14.17.0. Don't forget to change resource name in .env**
-### **aswell as to start boilerplate in server config.**
 # FiveM React + TypeScript Boilerplate.
 
 - Functional boilerplate for NUI development.
