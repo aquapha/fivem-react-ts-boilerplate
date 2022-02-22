@@ -5,6 +5,6 @@ export const RegisterAllNUIs = () => {
   const dispatch = useAppDataDispatch();
   
   NUI.registerEmit("toggle", () => {
-    dispatch({ type: 'ON' });
+    dispatch({ type: 'TOGGLE' });
   });
 }
