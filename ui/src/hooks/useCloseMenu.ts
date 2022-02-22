@@ -1,7 +1,6 @@
-import axios from 'axios';
 import { useEffect } from 'react';
+import Axios from 'src/config/axios/Axios';
 import { useAppDataDispatch } from '../contexts';
-import { RESOURCE_NAME } from 'src/utils/constants';
 
 export function useCloseMenu() {
   const dispatch = useAppDataDispatch();
@@ -10,7 +9,7 @@ export function useCloseMenu() {
     const handleClose = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         dispatch({ type: 'OFF' });
-        axios.post(`https://${RESOURCE_NAME}/close`);
+        Axios.post('close')
       }
     };
 

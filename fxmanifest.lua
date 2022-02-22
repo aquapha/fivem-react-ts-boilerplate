@@ -9,7 +9,7 @@ client_scripts {
 
 server_scripts {
   'config.lua',
-  'client/main.lua',
+  'server/main.lua',
 }
 
 ui_page "ui/build/index.html"
